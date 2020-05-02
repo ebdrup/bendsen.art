@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <title>Hedvig Bendsen - Artwork</title>
+    <meta name="description" content="The Artwork of Hedvig Bendsen">
+    {% include 'meta.html' %}
+    {{["_includes/css/bootstrap4.css", "index.njk"] | purifyCssBasedOnIncludes | safe }}
+    {{["_includes/css/art.css", "index.njk"] | purifyCssBasedOnIncludes | safe }}
+  </head>
+
+  <body>
+    <div class="art">
+      <div>
+        <img src="/img/3.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/Moonshine_2020_Apr._2.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/1.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/2020_Marts 1.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/2020_Marts 2.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/2020_Marts.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/2020.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/Lemon.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/Lilypad.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/Orange.png.webp"/>
+      </div>
+      <div>
+        <img src="/img/2.png.webp"/>
+      </div>
+    </div>
+    {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
+  </body>
+</html>>

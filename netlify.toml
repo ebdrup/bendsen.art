@@ -1,0 +1,26 @@
+[build]
+  publish = "_site"
+  command = "eleventy"
+
+# REDIRECT
+
+# Redirect rule example
+# For more information see:- https://www.netlify.com/docs/netlify-toml-reference/
+
+#[[redirects]]
+#  from = "/*"
+#  to = "/blog/:splat"
+
+# The default HTTP status code is 301, but you can define a different one e.g.
+# status = 302
+
+# Headers
+# For more information see:- https://www.netlify.com/docs/netlify-toml-reference/
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "no-referrer-when-downgrade"

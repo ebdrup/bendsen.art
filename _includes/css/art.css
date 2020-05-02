@@ -1,0 +1,39 @@
+body,
+html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* https://github.com/Heydon/fukol-grids */
+.art {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 0px;
+}
+
+.art > * {
+  margin: 0;
+  padding: 0;
+  background-image: url('/img/Lemon.png.webp');
+  background-size: cover;
+  flex: 1 0 30em;
+  vertical-align: middle;
+  background-color: #aaa;
+  display: inline-block;
+  padding-inline-start: 0;
+}
+
+.art > div > img {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
