@@ -47,6 +47,8 @@ module.exports = function (eleventyConfig) {
     return fs.readFileSync(path.join(__dirname, file), 'utf-8');
   });
 
+  eleventyConfig.addFilter('encodeURIComponent', str => encodeURIComponent(str));
+
   eleventyConfig.addFilter('script', function (code) {
     return `<script type="text/javascript">${code}</script>`;
   });

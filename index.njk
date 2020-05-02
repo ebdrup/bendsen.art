@@ -13,12 +13,11 @@
       {% for image in images %}
         <div>
           <picture>
-            <source srcset="/img/min/{{image}}.webp" type="image/webp">
-            <img src="/img/min/{{image}}.png">
+            <source srcset="/img/min/{{image | encodeURIComponent | safe}}.webp" type="image/webp">
+            <img src="/img/min/{{image | encodeURIComponent | safe }}.png">
           </picture>
         </div>
       {% endfor %}
     </div>
-    {{ "_includes/js/webp.js" | load | jsmin | script | safe }}
   </body>
 </html>>
