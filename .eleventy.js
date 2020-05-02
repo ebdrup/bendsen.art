@@ -4,13 +4,11 @@ const Nunjucks = require('nunjucks');
 const purifyCss = require('purify-css');
 const htmlmin = require('html-minifier');
 const Terser = require('terser');
-const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./_includes/*');
   eleventyConfig.addPassthroughCopy('img');
   eleventyConfig.addPassthroughCopy('favicon');
-  eleventyConfig.addPlugin(lazyImagesPlugin);
 
   let nunjucksEnvironment = new Nunjucks.Environment(new Nunjucks.FileSystemLoader('_includes'));
   eleventyConfig.setLibrary('njk', nunjucksEnvironment);
