@@ -15,7 +15,7 @@ function webp() {
     // no WebP
     var items = document.getElementsByClassName('img');
     for (var i = 0; i < items.length; i++) {
-      items[i].src = getComputedStyle(items[i]).src.replace('.webp', '');
+      items[i].src = items[i].src.replace('.webp', '');
     }
   }
 }
