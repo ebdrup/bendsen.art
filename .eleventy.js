@@ -4,6 +4,7 @@ const Nunjucks = require('nunjucks');
 const purifyCss = require('purify-css');
 const htmlmin = require('html-minifier');
 const Terser = require('terser');
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./_includes/*');
@@ -78,4 +79,5 @@ module.exports = function (eleventyConfig) {
     }
     return content;
   });
+  eleventyConfig.addPlugin(lazyImagesPlugin);
 };
