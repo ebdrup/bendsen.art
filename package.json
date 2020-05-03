@@ -1,7 +1,7 @@
 {
-  "name": "hedvig.art",
+  "name": "bendsen.art",
   "version": "1.0.0",
-  "description": "hedvig.art",
+  "description": "bendsen.art",
   "engines": {
     "node": "^12.16.1",
     "npm": "^6.14.4"
@@ -29,13 +29,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ebdrup/hedvig.art"
+    "url": "https://github.com/ebdrup/bendsen.art"
   },
   "license": "None",
   "bugs": {
-    "url": "https://github.com/ebdrup/hedvig.art/issues"
+    "url": "https://github.com/ebdrup/bendsen.art/issues"
   },
-  "homepage": "http://ithedvig.art.dk",
+  "homepage": "https://bendsen.art",
   "dependencies": {
     "@11ty/eleventy": "0.10.0",
     "eleventy-plugin-lazyimages": "github:ebdrup/eleventy-plugin-lazyimages#Handle_inlined_data-url_images_and_look_for_filetyp_in_format_parameter_of_querystring",
