@@ -1,9 +1,9 @@
-const fs = require('fs');
-const glob = require('glob');
-const sharp = require('sharp');
-const imagemin = require('imagemin');
-const imageminPngquant = require('imagemin-pngquant');
-const webp = require('imagemin-webp'); // imagemin's WebP plugin.
+import fs  from 'fs';
+import glob from 'glob';
+import sharp from 'sharp';
+import imagemin from 'imagemin';
+import imageminPngquant from 'imagemin-pngquant';
+import webp from 'imagemin-webp'; // imagemin's WebP plugin.
 
 (async () => {
   await Promise.all(

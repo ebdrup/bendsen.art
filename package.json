@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "bendsen.art",
   "engines": {
-    "node": "^12.16.1",
-    "npm": "^6.14.4"
+    "node": "^16.8.0",
+    "npm": "^7.22.0"
   },
   "scripts": {
     "test": "mocha",
@@ -37,32 +37,33 @@
   },
   "homepage": "https://bendsen.art",
   "dependencies": {
-    "@11ty/eleventy": "0.10.0",
+    "@11ty/eleventy": "0.12.1",
+    "browser-sync-ui": "2.27.5",
     "eleventy-plugin-lazyimages": "github:ebdrup/eleventy-plugin-lazyimages#Handle_inlined_data-url_images_and_look_for_filetyp_in_format_parameter_of_querystring",
     "html-minifier": "4.0.0",
-    "nunjucks": "3.2.1",
+    "nunjucks": "3.2.3",
     "purify-css": "1.2.5",
-    "terser": "4.6.13"
+    "terser": "5.7.2"
   },
   "devDependencies": {
-    "@practio/eslint-config-practio": "7.1.0",
+    "@practio/eslint-config-practio": "9.0.0",
     "@practio/prettier-config": "4.0.0",
-    "chai": "4.2.0",
+    "chai": "4.3.4",
     "chai-http": "4.3.0",
-    "execa": "4.0.0",
-    "glob": "7.1.6",
-    "husky": "4.2.5",
-    "imagemin": "7.0.1",
-    "imagemin-pngquant": "8.0.0",
-    "imagemin-webp": "5.1.0",
-    "lint-staged": "10.2.2",
-    "melody-idom": "1.7.1",
-    "melody-runtime": "1.7.1",
-    "mocha": "7.1.2",
-    "mocha-eslint": "6.0.0",
-    "prettier": "2.0.5",
-    "prettier-plugin-twig-melody": "0.4.3",
-    "sharp": "0.25.2"
+    "execa": "5.1.1",
+    "glob": "7.1.7",
+    "husky": "7.0.2",
+    "imagemin": "8.0.1",
+    "imagemin-pngquant": "9.0.2",
+    "imagemin-webp": "6.0.0",
+    "lint-staged": "11.1.2",
+    "melody-idom": "1.7.5",
+    "melody-runtime": "1.7.5",
+    "mocha": "9.1.1",
+    "mocha-eslint": "7.0.0",
+    "prettier": "2.3.2",
+    "prettier-plugin-twig-melody": "0.4.6",
+    "sharp": "0.29.0"
   },
   "mocha": {
     "require": [
