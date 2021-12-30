@@ -1,4 +1,4 @@
-import fs  from 'fs';
+import fs from 'fs';
 import glob from 'glob';
 import sharp from 'sharp';
 import imagemin from 'imagemin';

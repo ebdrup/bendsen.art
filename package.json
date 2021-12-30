@@ -1,5 +1,6 @@
 {
   "name": "bendsen.art",
+  "type": "commonjs",
   "version": "1.0.0",
   "description": "bendsen.art",
   "engines": {
