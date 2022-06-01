@@ -65,7 +65,7 @@
     "mocha-eslint": "7.0.0",
     "prettier": "2.3.2",
     "prettier-plugin-twig-melody": "0.4.6",
-    "sharp": "0.29.0"
+    "sharp": "0.30.5"
   },
   "mocha": {
     "require": [
