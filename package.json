@@ -45,7 +45,7 @@
     "nunjucks": "3.2.3",
     "purify-css": "1.2.5",
     "regenerator-runtime": "0.13.9",
-    "terser": "5.7.2"
+    "terser": "5.14.2"
   },
   "devDependencies": {
     "@practio/eslint-config-practio": "9.0.0",
