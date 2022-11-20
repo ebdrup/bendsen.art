@@ -1,16 +1,18 @@
-import fs from 'fs';
-import glob from 'glob';
-import sharp from 'sharp';
-import imagemin from 'imagemin';
-import imageminPngquant from 'imagemin-pngquant';
-import webp from 'imagemin-webp'; // imagemin's WebP plugin.
+import fs from "fs";
+import glob from "glob";
+import sharp from "sharp";
+import imagemin from "imagemin";
+import imageminPngquant from "imagemin-pngquant";
+import webp from "imagemin-webp"; // imagemin's WebP plugin.
 
 (async () => {
   await Promise.all(
-    glob.sync('img/*.png', { absolute: true }).map(async file => {
-      const outputFile = file.replace('/img/', '/img/half/');
+    glob.sync("img/*.png", { absolute: true }).map(async (file) => {
+      const outputFile = file.replace("/img/", "/img/half/");
       if (file === outputFile) {
-        throw new Error(`Problem with file: ${file}, gives outputFile: ${outputFile}`);
+        throw new Error(
+          `Problem with file: ${file}, gives outputFile: ${outputFile}`
+        );
       }
       const input = fs.readFileSync(file);
       const { width } = await sharp(input).metadata();
@@ -20,11 +22,11 @@ import webp from 'imagemin-webp'; // imagemin's WebP plugin.
       }
       console.log({ width, newWidth, outputFile });
       await sharp(input).resize().toFile(outputFile);
-    }),
+    })
   );
-  const destination = './img/min'; // Output folder
+  const destination = "./img/min"; // Output folder
 
-  const files = await imagemin(['img/half/*.png'], {
+  const files = await imagemin(["img/half/*.png"], {
     destination,
     plugins: [webp({ quality: 50 })],
   });
@@ -33,9 +35,9 @@ import webp from 'imagemin-webp'; // imagemin's WebP plugin.
       sourcePath,
       destinationPath,
       byteLength: data.byteLength,
-    })),
+    }))
   );
-  const files2 = await imagemin(['img/half/*.png'], {
+  const files2 = await imagemin(["img/half/*.png"], {
     destination,
     plugins: [
       imageminPngquant({
@@ -48,6 +50,6 @@ import webp from 'imagemin-webp'; // imagemin's WebP plugin.
       sourcePath,
       destinationPath,
       byteLength: data.byteLength,
-    })),
+    }))
   );
 })();

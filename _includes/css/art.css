@@ -22,7 +22,7 @@ html {
 .art > * {
   margin: 0;
   padding: 0;
-  background-image: url('/img/min/Lemon.png');
+  background-image: url("/img/min/Lemon.png");
   background-size: cover;
   flex: 1 0 max(30em, 33.33vw);
   vertical-align: middle;
