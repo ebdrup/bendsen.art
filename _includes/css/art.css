@@ -22,8 +22,9 @@ html {
 .art > * {
   margin: 0;
   padding: 0;
-  flex: 1 0 max(30em, 33.33vw);
+  flex: 1 0 max(40em, 33vw);
   vertical-align: middle;
+  align-content: center;
   background-color: #ccc;
   display: inline-block;
   padding-inline-start: 0;
