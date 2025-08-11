@@ -1,5 +1,5 @@
 import fs from "fs";
-import glob from "glob";
+import * as glob from "glob";
 import sharp from "sharp";
 import imagemin from "imagemin";
 import imageminPngquant from "imagemin-pngquant";
