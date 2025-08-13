@@ -57,6 +57,18 @@ module.exports = function (eleventyConfig) {
     encodeURIComponent(str)
   );
 
+  eleventyConfig.addFilter("getImageYear", function (imageName) {
+    try {
+      const imagePath = path.join(__dirname, "img", `${imageName}.png`);
+      const stats = fs.statSync(imagePath);
+      const creationYear = stats.birthtime.getFullYear();
+      return creationYear;
+    } catch (error) {
+      console.log(`Could not get creation date for ${imageName}:`, error.message);
+      return null;
+    }
+  });
+
   eleventyConfig.addFilter("script", function (code) {
     return `<script type="text/javascript">${code}</script>`;
   });

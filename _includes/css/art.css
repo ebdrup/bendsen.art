@@ -30,6 +30,10 @@ html {
   padding-inline-start: 0;
 }
 
+.art > div {
+  position: relative;
+}
+
 .art > div img {
   display: block;
   margin: 0;
@@ -37,4 +41,18 @@ html {
   width: 100%;
   max-width: 100vw;
   height: auto;
+}
+
+.year-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(64, 64, 64, 0.8);
+  color: white;
+  padding: 4px 8px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  pointer-events: none;
 }
