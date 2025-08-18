@@ -16,6 +16,9 @@
             <source srcset="/img/min/{{image | encodeURIComponent | safe}}.webp" type="image/webp">
             <img src="/img/min/{{image | encodeURIComponent | safe }}.png" alt="">
           </picture>
+          {% if creationYears[image] %}
+            <div class="year-overlay">{{ creationYears[image] }}</div>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
