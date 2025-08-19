@@ -4,7 +4,7 @@ const path = require('path');
 async function extractCreationYears() {
   const imgDir = path.join(__dirname, '../img');
   const dataDir = path.join(__dirname, '../_data');
-  const outputFile = path.join(dataDir, 'creation-years.json');
+  const outputFile = path.join(dataDir, 'creationYears.json');
   
   // Ensure _data directory exists
   if (!fs.existsSync(dataDir)) {

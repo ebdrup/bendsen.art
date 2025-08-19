@@ -21,7 +21,7 @@ import webp from "imagemin-webp"; // imagemin's WebP plugin.
         newWidth = width;
       }
       console.log({ width, newWidth, outputFile });
-      await sharp(input).resize().toFile(outputFile);
+      await sharp(input, {}).resize().toFile(outputFile);
     })
   );
   const destination = "./img/min"; // Output folder
@@ -52,4 +52,8 @@ import webp from "imagemin-webp"; // imagemin's WebP plugin.
       byteLength: data.byteLength,
     }))
   );
+  
+  for (const file of files2) {
+    fs.unlinkSync(file.sourcePath);
+  }
 })();
